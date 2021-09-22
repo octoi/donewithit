@@ -1,11 +1,14 @@
+import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
+  const [counter, setCounter] = useState(0);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.text}>You clicked the button {counter} times</Text>
+      <Button color="teal" disabled={counter == 10} title="Click Me" onPress={() => setCounter(counter + 1)} />
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +17,18 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#101010',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    color: '#fff',
+    fontSize: 20,
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: 'teal',
+    color: '#fff',
+    marginTop: 5,
+  }
 });
