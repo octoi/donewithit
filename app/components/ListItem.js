@@ -1,8 +1,8 @@
-import React from "react";
-import { View, StyleSheet, Image } from "react-native";
-import AppText from "./AppText";
+import React from 'react';
+import { View, StyleSheet, Image } from 'react-native';
+import AppText from './AppText';
 
-import colors from "../config/colors";
+import colors from '../config/colors';
 
 function ListItem({ title, subTitle, image }) {
   return (
@@ -18,7 +18,8 @@ function ListItem({ title, subTitle, image }) {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: "row",
+    flexDirection: 'row',
+    padding: 15,
   },
   image: {
     width: 70,
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     color: colors.medium,
   },
   title: {
-    fontWeight: "500",
+    fontWeight: '500',
   },
 });
 
